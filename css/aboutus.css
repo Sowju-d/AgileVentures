@@ -1,0 +1,1041 @@
+/* --- Agile Ventures: About Section Styles --- */
+
+.about-style-three {
+    padding: 100px 0 !important;
+    background-color: #ffffff !important;
+    overflow: hidden !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* FORCE SIDE-BY-SIDE LAYOUT */
+.about-style-three .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* Prevents dropping to the next line */
+    align-items: center !important; /* Centers text vertically with image */
+    justify-content: space-between !important;
+    gap: 30px !important; /* Creates a clean gap between img and text */
+}
+
+/* Ensure both columns take up equal space or specific ratios */
+.about-style-three .col-md-6 {
+    flex: 1 !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    float: none !important; /* Remove legacy floats */
+}
+
+/* Image scaling to ensure it doesn't push the text away */
+.about-style-three .about-img-box img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Responsive: Stack only on mobile devices */
+@media (max-width: 991px) {
+    .about-style-three .row {
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    .about-style-three .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Image Box with Floating Animation */
+.about-style-three .about-img-box {
+    position: relative !important;
+    padding-right: 30px !important;
+    animation: avFloat 6s ease-in-out infinite !important;
+}
+
+.about-style-three .about-img-box img {
+    width: 100% !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 50, 0.15) !important;
+    border-bottom: 8px solid #f2b705 !important; /* Logo Gold Accent */
+     height: auto !important;
+    display: block !important;
+}
+
+/* "Our Story" Overlay Badge */
+.about-style-three .about-img-box .content {
+    position: absolute !important;
+    bottom: -30px !important;
+    right: 0 !important;
+    background: #c82333 !important; /* Agile Red */
+    padding: 30px !important;
+    border-radius: 15px !important;
+    color: #fff !important;
+    box-shadow: 0 10px 30px rgba(200, 35, 51, 0.3) !important;
+    z-index: 2 !important;
+}
+
+.about-style-three .about-img-box .content span {
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+.about-style-three .about-img-box .content h3 {
+    margin: 0 !important;
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+}
+
+/* Right Side Content */
+.about-style-three .about-content {
+    padding-left: 40px !important;
+}
+
+.about-style-three .about-content h3 {
+    font-size: 36px !important;
+    line-height: 1.3 !important;
+    color: #002147 !important; /* Agile Navy Blue */
+    font-weight: 800 !important;
+    margin-bottom: 25px !important;
+}
+
+.about-style-three .about-content p {
+    font-size: 18px !important;
+    color: #444 !important;
+    line-height: 1.8 !important;
+    margin-bottom: 40px !important;
+}
+
+/* Catchy Animated Buttons */
+.about-style-three .about-btn {
+    display: inline-block !important;
+    padding: 15px 35px !important;
+    margin-right: 15px !important;
+    margin-bottom: 15px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border-radius: 50px !important;
+    transition: all 0.4s ease !important;
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: hidden !important;
+}
+
+/* Red Button Style */
+.about-style-three .about-btn {
+    background: #002147 !important; /* Start Navy */
+    color: #fff !important;
+    border: 2px solid #002147 !important;
+}
+
+/* The "Sweep" Animation */
+.about-style-three .about-btn::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0% !important;
+    height: 100% !important;
+    background: #c82333 !important; /* Turns Red on Hover */
+    transition: all 0.4s ease !important;
+    z-index: -1 !important;
+}
+
+.about-style-three .about-btn:hover::before {
+    width: 100% !important;
+}
+
+.about-style-three .about-btn:hover {
+    color: #fff !important;
+    border-color: #c82333 !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Keyframe for Image Floating */
+@keyframes avFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive Mobile Tweaks */
+@media (max-width: 768px) {
+    .about-style-three .about-content { padding-left: 0 !important; margin-top: 60px !important; }
+    .about-style-three .about-content h3 { font-size: 28px !important; }
+    .about-style-three .about-img-box { padding-right: 0 !important; }
+}
+
+/* Forces the row to behave as a flex container for side-by-side alignment */
+.about-style-three .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important; /* Vertically centers text with image */
+}
+
+/* Ensures the image is on the left and content is on the right */
+.about-style-three .about-img-box {
+    margin-right: 0 !important;
+    padding-right: 40px !important; /* Space between img and text */
+}
+
+.about-style-three .about-content {
+    padding-left: 20px !important;
+    text-align: left !important; /* Ensures text stays left-aligned */
+}
+
+/* Responsive: Allow stacking only on mobile */
+@media (max-width: 991px) {
+    .about-style-three .row {
+        display: block !important;
+    }
+    .about-style-three .about-img-box {
+        padding-right: 0 !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+
+
+/* WRAP SECTION WITHIN A CENTRAL CONTAINER */
+.features-style-two .container {
+    max-width: 1200px !important; /* Limits the width so it doesn't touch the screen edges */
+    margin: 0 auto !important;    /* Centers the entire block */
+    padding: 0 40px !important;   /* Adds "breathing room" on the far left and right */
+}
+
+/* ADJUST ROW TO MATCH WRAPPER */
+.features-style-two .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important; /* Centers cards if they are smaller than the container */
+    gap: 30px !important;             /* Professional spacing between cards */
+    margin: 0 !important;             /* Removes any negative Bootstrap margins */
+}
+
+/* FINE-TUNE CARD WIDTHS */
+.features-style-two .col-md-4 {
+    flex: 1 !important;
+    max-width: 380px !important;      /* Prevents cards from becoming too wide on huge screens */
+}
+
+/* Responsive: Allow wrapping on small tablets */
+@media (max-width: 1024px) {
+    .features-style-two .row {
+        flex-wrap: wrap !important;
+    }
+    .features-style-two .col-md-4 {
+        max-width: 100% !important;
+        flex: 0 0 45% !important; /* Shows 2 cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .features-style-two .col-md-4 {
+        flex: 0 0 100% !important; /* Stacks 1 per row on mobile */
+    }
+}
+
+/* --- Agile Ventures: Feature Cards Section --- */
+.features-style-two {
+    padding: 80px 0 !important;
+    background-color: #f9f9f9 !important;
+}
+
+/* Card Container */
+.single-features-style-two {
+    background: #ffffff !important;
+    padding: 50px 30px !important;
+    text-align: center !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+    border-bottom: 5px solid #002147 !important; /* Agile Navy Base */
+    height: 100% !important;
+}
+
+/* Hover Animation: Bounce and Color Shift */
+.single-features-style-two:hover {
+    transform: translateY(-15px) !important;
+    box-shadow: 0 20px 40px rgba(0, 33, 71, 0.2) !important;
+}
+
+/* The "Bounce to Bottom" Background Effect */
+.single-features-style-two::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 0% !important;
+    background: linear-gradient(180deg, #002147 0%, #c82333 100%) !important; /* Navy to Red Gradient */
+    transition: all 0.5s ease !important;
+    z-index: -1 !important;
+}
+
+.single-features-style-two:hover::before {
+    height: 100% !important;
+}
+
+/* Icon Styling */
+.single-features-style-two i {
+    font-size: 60px !important;
+    color: #c82333 !important; /* Agile Red */
+    display: inline-block !important;
+    margin-bottom: 25px !important;
+    transition: all 0.4s ease !important;
+}
+
+.single-features-style-two:hover i {
+    color: #f2b705 !important; /* Logo Gold on hover */
+    transform: scale(1.1) rotate(5deg) !important;
+}
+
+/* Heading Sizes (Increased) */
+.single-features-style-two h3 {
+    font-size: 26px !important;
+    color: #002147 !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    transition: color 0.4s ease !important;
+}
+
+.single-features-style-two:hover h3 {
+    color: #ffffff !important;
+}
+
+/* Paragraph Text (Increased) */
+.single-features-style-two p {
+    font-size: 18px !important;
+    color: #666 !important;
+    line-height: 1.7 !important;
+    transition: color 0.4s ease !important;
+}
+
+.single-features-style-two:hover p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Smooth Entrance for the Row */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.features-style-two .col-md-4 {
+    animation: fadeInUp 0.8s ease backwards !important;
+}
+
+/* Staggered delay for cards */
+.features-style-two .col-md-4:nth-child(1) { animation-delay: 0.1s !important; }
+.features-style-two .col-md-4:nth-child(2) { animation-delay: 0.3s !important; }
+.features-style-two .col-md-4:nth-child(3) { animation-delay: 0.5s !important; }
+/* FORCE FEATURES INTO A SINGLE ROW */
+.features-style-two .row {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Forces all columns to stay in one line */
+    justify-content: space-between !important;
+    align-items: stretch !important; /* Ensures all cards have equal height */
+    gap: 20px !important; /* Balanced spacing between cards */
+}
+
+/* Ensure each column takes exactly 1/3 of the space */
+.features-style-two .col-md-4 {
+    flex: 1 !important;
+    width: 33.333% !important;
+    max-width: 33.333% !important;
+    display: flex !important; /* Allows the inner card to fill the height */
+}
+
+/* Ensure the card inside fills the full height of the column */
+.features-style-two .single-features-style-two {
+    width: 100% !important;
+}
+
+/* Tablet & Mobile: Allow stacking so text doesn't get too thin */
+@media (max-width: 991px) {
+    .features-style-two .row {
+        flex-wrap: wrap !important; /* Allows stacking on smaller screens */
+    }
+    .features-style-two .col-md-4 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+}
+
+/* --- Agile Ventures: Product Line (Timeline) Section --- */
+.time-line.gray-bg {
+    padding: 100px 0 !important;
+    background-color: #f4f7f9 !important;
+}
+
+/* Header Styling */
+.sec-title h3 {
+    font-size: 32px !important;
+    color: #002147 !important;
+    font-weight: 800 !important;
+    border-left: 5px solid #c82333 !important;
+    padding-left: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.sec-title p {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    color: #444 !important;
+}
+
+/* The Button Bar (Single Row) */
+.tab-title-wrapper {
+    margin: 50px 0 !important;
+    border-bottom: 2px solid #ddd !important;
+}
+
+#timeline-tab {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    flex-wrap: nowrap !important; /* Forces single row */
+}
+
+#timeline-tab li {
+    flex: 1 !important;
+    text-align: center !important;
+}
+
+#timeline-tab li a {
+    display: block !important;
+    padding: 20px 10px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #002147 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+    border-bottom: 4px solid transparent !important;
+}
+
+/* Active and Hover State */
+#timeline-tab li.active a, 
+#timeline-tab li a:hover {
+    color: #c82333 !important; /* Agile Red */
+    background: #ffffff !important;
+    border-bottom: 4px solid #f2b705 !important; /* Gold Accent */
+}
+
+/* Hide the mobile select form on Desktop */
+.timeline-tab-select-form {
+    display: none !important;
+}
+
+/* Change the width ratio: Image (left) gets 60%, Text (right) gets 40% */
+.tab-pane .col-md-6:first-child {
+    flex: 0 0 60% !important; /* Increase image container to 60% */
+    max-width: 60% !important;
+}
+
+.tab-pane .col-md-6:last-child {
+    flex: 0 0 40% !important; /* Decrease text container to 40% */
+    max-width: 40% !important;
+}
+
+/* Tab Content Animation */
+.tab-content .tab-pane {
+    display: none; /* Default Bootstrap behavior handled by JS */
+}
+
+.tab-content .tab-pane.active {
+    display: block !important;
+    animation: slideInRight 0.6s ease-out !important;
+}
+
+/* Side-by-Side Content Fix */
+
+
+/* WRAPPER: Limits the width and centers the section */
+.time-line.gray-bg .container {
+    max-width: 1250px !important; 
+    margin: 0 auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.tab-content .row {
+    display: flex !important;
+    align-items: center !important;
+    background: #fff !important;
+    padding: 40px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05) !important;
+    gap: 0 !important;
+}
+
+.tab-content img {
+   width: 100% !important;      /* Forces image to fill the 60% container */
+    max-width: 650px !important; /* Increase the max limit (was likely smaller) */
+    height: auto !important;
+    object-fit: cover !important; /* Keeps the image looking sharp */
+    border-radius: 15px !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.tab-content .content {
+    padding-left: 40px !important;
+}
+
+.tab-content .content h3 {
+    font-size: 28px !important;
+    color: #002147 !important;
+    margin-bottom: 20px !important;
+}
+
+.tab-content .content p {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+    color: #555 !important;
+}
+
+/* Keyframes for "Catchy" Animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    #timeline-tab {
+        flex-wrap: wrap !important;
+    }
+    #timeline-tab li {
+        width: 33.33% !important;
+        flex: none !important;
+    }
+    .tab-content .row {
+        flex-direction: column !important;
+    }
+    .tab-content .content {
+        padding-left: 0 !important;
+        padding-top: 30px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-tab-select-form { display: block !important; margin-bottom: 20px; }
+    #timeline-tab { display: none !important; }
+}
+
+/* --- Agile Ventures: Service Why Choose Us Section --- */
+.service-style-four.about-page {
+    padding: 100px 0 !important;
+    background-color: #ffffff !important;
+}
+
+/* Wrapped Container */
+.service-style-four .container {
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+    overflow: hidden; /* Clips animation overflow */
+}
+
+/* Heading Styling - Removed Underline */
+.service-style-four .sec-title h3 {
+    font-size: 42px !important;
+    line-height: 1.1 !important;
+    color: #002147 !important; /* Navy Blue */
+    font-weight: 800 !important;
+    margin: 0 !important;
+    text-transform: capitalize !important;
+    /* Added Entrance Animation */
+    animation: slideInLeft 1s ease-out forwards !important;
+}
+
+/* The Red Accent for Branding */
+.service-style-four .sec-title h3 span {
+    color: #c82333 !important; /* Agile Red */
+    display: inline-block !important;
+}
+
+/* Paragraph Styling - Professional Spacing */
+.service-style-four .sec-title .col-md-8 p {
+    font-size: 20px !important;
+    color: #333 !important;
+    line-height: 1.9 !important;
+    padding-left: 40px !important;
+    margin: 0 !important;
+    /* Added Entrance Animation with Delay */
+    animation: fadeInRight 1.2s ease-out forwards !important;
+}
+
+/* --- Catchy Animations --- */
+
+/* Slide from Left for Title */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide from Right for Paragraph */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+    .service-style-four .sec-title h3 {
+        font-size: 32px !important;
+        margin-bottom: 30px !important;
+        text-align: center !important;
+    }
+    .service-style-four .sec-title .col-md-8 p {
+        padding-left: 0 !important;
+        text-align: center !important;
+        font-size: 18px !important;
+    }
+}
+
+/* --- Agile Ventures: Testimonials Section --- */
+.testimonials-style-one {
+    padding: 100px 0 !important;
+    background-color: #f9f9f9 !important;
+}
+
+/* Container Wrap */
+.testimonials-style-one .container {
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+}
+
+/* Card Styling */
+.single-testimonials-style-one {
+    background: #ffffff !important;
+    padding: 40px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    border-top: 4px solid #c82333 !important; /* Agile Red top accent */
+    transition: all 0.4s ease !important;
+    margin: 20px 10px !important;
+    height: 100% !important;
+}
+
+.single-testimonials-style-one:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 33, 71, 0.1) !important;
+}
+
+/* Quote Image Styling */
+.qoute-img {
+    width: 40px !important;
+    margin-bottom: 20px !important;
+    opacity: 0.2;
+}
+
+/* Testimonial Text */
+.single-testimonials-style-one h3 {
+    font-size: 22px !important;
+    color: #002147 !important;
+    margin-bottom: 15px !important;
+    font-weight: 700 !important;
+}
+
+.single-testimonials-style-one p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #555 !important;
+    font-style: italic !important;
+}
+
+/* User Profile Styling */
+.name-box {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 25px !important;
+    border-top: 1px solid #eee !important;
+    padding-top: 20px !important;
+}
+
+.name-box .img-box img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    border: 2px solid #f2b705 !important; /* Gold border around faces */
+}
+
+.text-box h4 {
+    font-size: 18px !important;
+    color: #002147 !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+}
+
+.text-box span {
+    font-size: 14px !important;
+    color: #c82333 !important; /* Red for the subtitles */
+    font-weight: 600 !important;
+}
+
+/* --- Contact Info / CTA Section --- */
+.contact-info-style-one {
+    background: #002147 !important; /* Navy background */
+    padding: 60px 0 !important;
+    color: #ffffff !important;
+}
+
+.contact-info-style-one .title h3 {
+    font-size: 36px !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+}
+
+.contact-info-style-one .title p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 18px !important;
+}
+
+/* Contact Blocks */
+.single-contact-infos {
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.05) !important; /* Subtle glass look */
+    padding: 20px !important;
+    border-radius: 12px !important;
+    margin-bottom: 15px !important;
+    transition: background 0.3s !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.single-contact-infos:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.contact-info-style-one i {
+    font-size: 30px !important;
+    color: #f2b705 !important; /* Gold icons */
+    margin-right: 20px !important;
+}
+
+.contact-info-style-one .text-box h3 {
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    color: #c82333 !important; /* Agile Red labels */
+    letter-spacing: 1px !important;
+    margin: 0 !important;
+}
+
+.contact-info-style-one .text-box p {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+
+/* --- Animations --- */
+.contact-info-style-one .row {
+    animation: fadeInUp 0.8s ease-out !important;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Agile Ventures: Leadership Section --- */
+.ceo-message-wrapper {
+    padding: 100px 0 !important;
+    border-bottom: 1px solid #eee;
+}
+
+/* Update this block to ensure a consistent Left-Image / Right-Text flow */
+.ceo-message-wrapper .row {
+    display: flex !important;
+    align-items: center !important; /* Vertical center */
+    flex-direction: row !important; /* Force image left for all */
+}
+
+/* Ensure the image container has a clean margin-right */
+.ceo-message-wrapper .col-md-6:first-child {
+    padding-right: 30px !important;
+}
+
+/* Ensure the text container has a clean margin-left */
+.ceo-message-wrapper .col-md-6:last-child {
+    padding-left: 30px !important;
+}
+
+/* Alternate Backgrounds for Sections */
+.ceo-message-wrapper:nth-child(even) {
+    background-color: #fdfdfd !important;
+}
+
+/* Container Wrap */
+.ceo-message-wrapper .container {
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+}
+
+
+/* Image Styling with Agile Red/Navy Frame */
+.ceo-message-wrapper img {
+    width: 100% !important;
+    max-width: 500px !important;
+    border-radius: 20px !important;
+    box-shadow: 15px 15px 0px -2px #002147, 25px 25px 0px -2px #c82333 !important;
+    transition: all 0.5s ease !important;
+}
+
+
+.ceo-message-wrapper:hover img {
+    transform: translate(-10px, -10px) !important;
+    box-shadow: 30px 30px 0px -5px #002147, 35px 35px 0px -5px #c82333 !important;
+}
+
+/* Content Area */
+.ceo-message-content {
+    padding: 0 40px !important;
+}
+
+/* Name Styling */
+.ceo-message-content h3 {
+    font-size: 36px !important;
+    color: #002147 !important;
+    font-weight: 800 !important;
+    margin-bottom: 5px !important;
+}
+
+/* Title Styling (Gold) */
+.ceo-message-content span {
+    display: block !important;
+    font-size: 18px !important;
+    color: #f2b705 !important; /* Gold */
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 25px !important;
+}
+
+/* Paragraph Styling */
+.ceo-message-content p {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+    color: #444 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Horizontal line between vision and mission */
+.ceo-message-content p + p {
+    padding-top: 15px !important;
+    border-top: 1px dashed #ddd !important;
+}
+
+/* Mobile Fixes */
+@media (max-width: 991px) {
+    .ceo-message-wrapper:nth-child(even) .row {
+        flex-direction: row !important; /* Stack normally on mobile */
+    }
+    .ceo-message-content {
+        padding: 40px 0 0 0 !important;
+        text-align: center !important;
+    }
+    .ceo-message-wrapper img {
+        margin: 0 auto !important;
+        display: block !important;
+    }
+}
+
+/* --- Agile Ventures: 2-Column Review Grid --- */
+
+/* Force the row to behave as a flex container for equal heights */
+.testimonials-style-four .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+/* Ensure each review takes up exactly half the width on desktop */
+.testimonials-style-four .col-md-6 {
+    display: flex !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 15px !important; /* Spacing between cards */
+}
+
+.single-testimonial-style-four {
+    background: #ffffff !important;
+    width: 100% !important; /* Fill the 50% column */
+    padding: 40px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 33, 71, 0.05) !important;
+    border-top: 5px solid #002147 !important; /* Navy top accent */
+    
+    /* This is the key for "Full" looks: */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* Make sure the text justifies to look "Full" and professional */
+.single-testimonial-style-four .content-box p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: #444 !important;
+    text-align: justify !important; /* Makes the block look full */
+    margin-bottom: 25px !important;
+    flex-grow: 1 !important; /* Pushes stars to the bottom regardless of text length */
+}
+
+/* Headline Styling */
+.single-testimonial-style-four .text-box h3 {
+    font-size: 20px !important;
+    color: #c82333 !important; /* Agile Red for the Headline */
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+}
+
+.single-testimonial-style-four .text-box h4 {
+    font-size: 14px !important;
+    color: #002147 !important; /* Navy for the Company Name */
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Responsive: 1 per row on mobile */
+@media (max-width: 767px) {
+    .testimonials-style-four .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* --- Agile Ventures: 2-Column Review Grid --- */
+/* --- Agile Ventures: Full Testimonials Page --- */
+.testimonials-style-four.testimonials-page {
+    background-color: #f4f7f9 !important; /* Soft blue-gray background */
+    padding: 100px 0 !important;
+}
+
+/* Wrapped Container */
+.testimonials-style-four .container {
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+}
+
+/* Section Title Styling */
+.testimonials-style-four .sec-title h3 {
+    font-size: 42px !important;
+    color: #002147 !important; /* Navy */
+    font-weight: 800 !important;
+    margin-bottom: 50px !important;
+    position: relative;
+}
+
+/* Individual Testimonial Card */
+.single-testimonial-style-four {
+    background: #ffffff !important;
+    padding: 40px !important;
+    border-radius: 15px !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03) !important;
+    border-top: 5px solid transparent !important;
+    /* Gradient Border Top */
+    border-image: linear-gradient(to right, #002147, #c82333) 1 !important;
+    transition: all 0.3s ease-in-out !important;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px); /* Keeps boxes even in rows */
+}
+
+.single-testimonial-style-four:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 33, 71, 0.1) !important;
+}
+
+/* Top Quote & Title Area */
+.single-testimonial-style-four .top-box {
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-bottom: 20px !important;
+}
+
+.single-testimonial-style-four .qoute-icon {
+    font-size: 30px !important;
+    color: #c82333 !important; /* Agile Red for quotes */
+    margin-right: 15px !important;
+    opacity: 0.6;
+}
+
+.single-testimonial-style-four .text-box h3 {
+    font-size: 20px !important;
+    color: #002147 !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    margin: 0 0 5px 0 !important;
+}
+
+.single-testimonial-style-four .text-box h4 {
+    font-size: 15px !important;
+    color: #777 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Content Box Styling */
+.single-testimonial-style-four .content-box p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: #555 !important;
+    margin-bottom: 20px !important;
+    font-style: italic;
+}
+
+/* Star Rating Styling */
+.single-testimonial-style-four .stars {
+    margin-top: auto !important; /* Pushes stars to bottom */
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.single-testimonial-style-four .stars i {
+    color: #f2b705 !important; /* Agile Gold stars */
+    font-size: 14px !important;
+    margin-right: 3px !important;
+}
+
+/* Entrance Animation for cards */
+.single-testimonial-style-four {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,203 @@
+/* ================================================================
+   HORIZONTAL BLOG LISTING (IMAGE LEFT | TEXT RIGHT)
+   ================================================================ */
+
+.single-blog-style-two {
+    background: #fff;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.single-blog-style-two:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* The Flex Container */
+.blog-flex-container {
+    display: flex;
+    flex-direction: row; /* Force side-by-side */
+    align-items: stretch;
+}
+
+/* Image Side (Left) */
+.single-blog-style-two .img-box {
+    flex: 0 0 38%; /* Takes up 38% of the width */
+    overflow: hidden;
+}
+
+.single-blog-style-two .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching */
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+/* Content Side (Right) */
+.single-blog-style-two .text-box {
+    flex: 1; /* Takes up the remaining width */
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.single-blog-style-two h3 {
+    font-size: 22px !important;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #001d3d;
+    margin: 10px 0 15px 0;
+}
+
+.single-blog-style-two p {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Clips text to 3 lines for uniformity */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Meta Info */
+.meta-info {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #718096;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.meta-info i {
+    color: #e63946;
+    margin-right: 5px;
+}
+
+/* Custom View Details Link */
+.more-btn {
+    font-weight: 700;
+    color: #e63946;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.more-btn:hover {
+    gap: 12px;
+    color: #001d3d;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .blog-flex-container {
+        flex-direction: column; /* Stacks on mobile */
+    }
+    .single-blog-style-two .img-box {
+        flex: 0 0 250px;
+    }
+}
+/* ================================================================
+   PAGINATION & SIDEBAR
+   ================================================================ */
+
+/* Pagination */
+.blog-post-pagination {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.blog-post-pagination a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #001d3d;
+    border: 1px solid #edf2f7;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.blog-post-pagination a.active, 
+.blog-post-pagination a:hover {
+    background: #e63946; /* Agile Red */
+    color: #fff;
+    border-color: #e63946;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+/* Sidebar Recent Posts */
+.sidebar-right {
+    padding-left: 20px;
+}
+
+.recent-post-widget {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.recent-post-widget .title h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #001d3d;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.recent-post-widget .title h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #e63946;
+}
+
+.single-recent-post {
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.single-recent-post:last-child {
+    border-bottom: none;
+}
+
+.single-recent-post h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 0;
+}
+
+.single-recent-post a {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.single-recent-post a:hover {
+    color: #e63946;
+}

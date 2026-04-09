@@ -1,0 +1,139 @@
+
+.gf-main-intro {
+    text-align: center !important;
+    padding: 40px 20px 20px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+.gf-header-xl {
+    color: #e63946 !important; /* Proper Professional Red */
+    font-size: 48px !important; /* Large, bold heading */
+    font-weight: 800 !important;
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Using high-specificity ID selectors to prevent overrides */
+#gf-contact-section {
+    padding: 60px 20px !important;
+    background: #f4f7f9 !important;
+    font-family: 'Segoe UI', Roboto, sans-serif !important;
+    display: flex;
+    justify-content: center;
+}
+
+#gf-contact-section .gf-container {
+    max-width: 1100px !important;
+    width: 100% !important;
+}
+
+#gf-contact-section .gf-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Info Side Styles */
+#gf-contact-section .gf-contact-info .gf-title {
+    color: #0073b1 !important;
+    font-size: 24px !important;
+    margin-bottom: 5px !important;
+    border-left: 4px solid #0073b1 !important;
+    padding-left: 15px !important;
+}
+
+#gf-contact-section .gf-contact-info p {
+    color: #555 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Form Wrapper with Animation */
+#gf-contact-section .gf-contact-form-wrapper {
+    background: #ffffff !important;
+    padding: 40px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+#gf-contact-section .gf-contact-form-wrapper:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+#gf-contact-section .gf-form-header {
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+    font-size: 22px !important;
+    color: #333 !important;
+}
+
+/* Input Animations */
+#gf-contact-section .gf-input-group {
+    margin-bottom: 15px !important;
+}
+
+#gf-contact-section input, 
+#gf-contact-section textarea {
+    width: 100% !important;
+    padding: 12px 15px !important;
+    border: 2px solid #eee !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box !important;
+}
+
+#gf-contact-section input:focus, 
+#gf-contact-section textarea:focus {
+    border-color: #0073b1 !important;
+    background-color: #f0faff !important;
+    box-shadow: 0 0 8px rgba(0,115,177,0.2) !important;
+}
+
+/* Animated Submit Button */
+#gf-contact-section .gf-submit-btn {
+    width: 100% !important;
+    background: #0073b1 !important;
+    color: white !important;
+    padding: 14px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transition: background 0.3s ease !important;
+}
+
+#gf-contact-section .gf-submit-btn:hover {
+    background: #005582 !important;
+}
+
+#gf-contact-section .gf-submit-btn::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 300% !important;
+    height: 300% !important;
+    background: rgba(255,255,255,0.2) !important;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0) !important;
+    transition: transform 0.6s ease-out !important;
+}
+
+#gf-contact-section .gf-submit-btn:active::after {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1) !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #gf-contact-section .gf-row {
+        grid-template-columns: 1fr !important;
+    }
+}

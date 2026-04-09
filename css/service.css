@@ -1,0 +1,221 @@
+/* --- Agile Ventures Custom Styles --- */
+:root {
+    --primary-color: #1a3c5a; /* Deep Industrial Blue */
+    --accent-color: #f39c12;  /* Professional Orange */
+    --text-dark: #333333;
+    --bg-light: #f4f7f9;
+    --white: #ffffff;
+    --transition: all 0.3s ease-in-out;
+}
+
+.service-page {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Sidebar Styling */
+.av-sidebar-wrap {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.service-list li:last-child { border: none; }
+
+.service-list li a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+}
+
+.service-list li a:hover {
+    background: #f8fafd;
+    color: var(--primary-color);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.broucher-sidebar {
+    margin-top: 30px;
+    background: var(--primary-color);
+    padding: 25px;
+    border-radius: 12px;
+    color: var(--white);
+    text-align: center;
+}
+
+.broucher-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.broucher-btn:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Service Grid Cards */
+.single-service-style-four {
+    margin-bottom: 30px;
+    perspective: 1000px;
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    background: var(--primary-color);
+}
+
+.img-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    opacity: 0.85;
+}
+
+.single-service-style-four:hover .img-box img {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+.img-box .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(to bottom, transparent 0%, rgba(26, 60, 90, 0.9) 100%);
+}
+
+.img-box .content h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.img-box .content h3 span {
+    font-size: 14px;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.img-box .content i {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.more.hvr-sweep-to-right {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 25px;
+    border: 2px solid var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.more.hvr-sweep-to-right:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+@media (min-width: 992px) {
+    .sidebar {
+        border-left: 1px solid #eee; /* Visual separator for the 1/4 column */
+        padding-left: 20px;
+    }
+}
+
+/* --- High-Strength Column Layout Fix --- */
+@media (min-width: 992px) {
+    /* 1. Fix the edge-touching: Add padding to the main row */
+    #agile-layout-row.row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: flex-start !important;
+        padding: 0 30px !important; /* This keeps it away from the screen edges */
+    }
+
+    /* 2. Professional 75/25 Split */
+    #agile-layout-row .agile-main-content {
+        flex: 0 0 75% !important;
+        max-width: 75% !important;
+        width: 75% !important;
+        padding-right: 40px !important; /* This is the gap between the images and the sidebar */
+    }
+
+    #agile-layout-row .agile-sidebar-column {
+        flex: 0 0 25% !important;
+        max-width: 35% !important;
+        width: 25% !important;
+    }
+}
+
+/* 4. Fix for mobile screens */
+@media (max-width: 991px) {
+    #agile-layout-row {
+        padding: 0 15px !important;
+    }
+    #agile-layout-row .agile-main-content,
+    #agile-layout-row .agile-sidebar-column {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* --- UPDATED IMAGE GAPS (TOP, BOTTOM, LEFT, RIGHT) --- */
+
+/* 1. Left and Right gaps */
+#agile-layout-row .agile-main-content .col-md-6 {
+    padding: 0 15px !important; 
+}
+
+/* 2. Top and Bottom gaps */
+#agile-layout-row .single-service-style-four {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    perspective: 1000px; /* Keep your existing perspective */
+}

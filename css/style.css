@@ -1,0 +1,331 @@
+:root {
+            --primary: #0a254d;    /* Professional Navy */
+            --accent: #e63946;     /* Highlight Red */
+            --whatsapp: #25d366;
+            --white: #ffffff;
+            --gray-bg: #f8f9fa;
+            --text-dark: #111111;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: var(--text-dark); line-height: 1.6; font-size: 18px; }
+
+        /* TOP BAR - ULTRA CLEAR */
+        .top-bar { background: var(--primary); color: var(--white); padding: 12px 0; font-size: 16px; font-weight: 600; }
+        .top-bar .container { display: flex; justify-content: space-between; max-width: 1300px; margin: 0 auto; padding: 0 20px; align-items: center; }
+        .top-bar a { color: var(--white); text-decoration: none; margin-left: 20px; transition: 0.3s; }
+        .top-bar a:hover { color: var(--accent); }
+        .top-bar i { color: var(--accent); margin-right: 8px; font-size: 18px; }
+
+        /* NAVIGATION */
+        .main-nav { background: var(--white); padding: 10px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .main-nav .container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; padding: 0 20px; }
+        .logo img { height: 70px; display: block; }
+
+        .nav-links { display: flex; list-style: none; gap: 15px; align-items: center; }
+        .nav-links > li { position: relative; padding: 15px 0; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 16px; text-transform: uppercase; transition: 0.3s; padding: 10px 5px; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* DROPDOWN MENU */
+        .sub-menu { 
+            position: absolute; top: 100%; left: 0; background: var(--white); min-width: 280px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); display: none; list-style: none; 
+            border-top: 4px solid var(--accent); padding: 10px 0; z-index: 100;
+        }
+        .nav-links li:hover .sub-menu { display: block; }
+        .sub-menu li a { 
+            color: var(--primary); font-size: 15px; padding: 12px 20px; display: block; 
+            text-transform: none; border-bottom: 1px solid #eee; 
+        }
+        .sub-menu li a:hover { background: var(--gray-bg); color: var(--accent); padding-left: 25px; }
+
+        /* HIGHLIGHTED CTA */
+        .btn-quote { 
+            background: var(--accent); color: var(--white) !important; padding: 12px 25px !important; 
+            border-radius: 5px; margin-left: 15px; display: inline-block; box-shadow: 0 4px 10px rgba(230, 57, 70, 0.3);
+        }
+        .btn-quote:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(230, 57, 70, 0.4); }
+
+       /* ================================================================
+   SINGLE CSS FILE FOR FOOTER & COMMON ELEMENTS
+   ================================================================ */
+
+/* GLOBAL FOOTER WRAPPER */
+.site-footer {
+    background: #0d1117; /* Modern dark background */
+    color: #ffffff;
+    padding: 80px 0 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* GRID SYSTEM */
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 40px; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* HEADINGS - BOLD & HIGHLIGHTED */
+.footer-widget h3, .footer-col h4 {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    border-left: 5px solid var(--accent);
+    padding-left: 15px;
+    line-height: 1.2;
+}
+
+.footer-widget {
+  padding-left: 2px;
+    flex: 1;                   /* Forces each div to grow equally */
+    min-width: 250px;          /* Prevents them from getting too squashed */
+    margin: 10px;              /* Equal spacing between the boxes */
+}
+
+/* TEXT CONTENT */
+.footer-widget p, .footer-col p {
+    color: #cbd5e0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* ICONS */
+.footer-widget i, .footer-col i { 
+    color: var(--accent); 
+    margin-right: 10px; 
+    width: 20px; 
+    text-align: center;
+}
+
+/* LINKS LIST */
+.links-list, .footer-links { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.links-list li, .footer-links li { 
+    margin-bottom: 12px; 
+    border-bottom: 1px solid #1a202c; 
+    padding-bottom: 8px; 
+}
+
+.links-list li a, .footer-links li a { 
+    color: #cbd5e0; 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: 0.3s; 
+    display: inline-block;
+}
+
+.links-list li a:hover, .footer-links li a:hover { 
+    color: var(--accent); 
+    padding-left: 10px; 
+}
+
+/* SUBSCRIPTION FORM */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.subscribe-form input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #1a202c;
+    color: white;
+    outline: none;
+}
+
+.subscribe-form button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover { 
+    background: #c02a35; 
+    transform: scale(1.02); 
+}
+
+/* SOCIAL ICONS */
+.social-icons-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.2);
+}
+
+/* BOTTOM BAR */
+.bottom-footer {
+    background: #000000;
+    padding: 25px 0;
+    margin-top: 60px;
+    border-top: 1px solid #1a202c;
+}
+
+.bottom-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bottom-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+}
+
+.bottom-footer strong {
+    color: var(--white);
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .bottom-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+        /* WHATSAPP */
+        .whatsapp-btn { 
+            position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; 
+            width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; 
+            justify-content: center; font-size: 35px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
+            z-index: 9999; text-decoration: none; transition: 0.3s; 
+        }
+        .whatsapp-btn:hover { transform: scale(1.1) rotate(10deg); }
+
+        @media (max-width: 992px) {
+            .nav-links { display: none; } /* Mobile Menu implementation can follow */
+            .top-bar .container { flex-direction: column; gap: 10px; text-align: center; }
+        }
+
+        /* ================================================================
+   GLOBAL BODY & THEME SETTINGS
+   ================================================================ */
+:root {
+    --accent: #c02a35; /* Your Primary Red */
+    --white: #ffffff;
+    --dark: #1a1a1a;
+    --text-gray: #666666;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* ================================================================
+   MAIN SLIDER CUSTOM STYLES
+   ================================================================ */
+.main-slider h2 {
+    font-size: 50px !important; /* Slightly smaller to prevent overlap on smaller screens */
+    font-weight: 900 !important;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1.2 !important; /* Increased spacing between lines */
+    margin-bottom: 15px !important;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    display: block; /* Ensures it doesn't merge with the H4 */
+}
+
+.main-slider h4 {
+    font-size: 22px !important;
+    margin-top: 10px !important;
+    display: inline-block;
+    line-height: 1.4 !important;
+}
+
+.main-slider h2 span {
+    color: var(--accent); /* Highlights 'Industrial' or 'Services' */
+}
+
+
+.main-slider .text.white-text {
+    font-size: 20px !important;
+    color: #f0f0f0;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 650px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* BUTTON MODERNIZATION */
+.theme-btn.btn-style-one {
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 0px; /* Sharp, industrial look */
+    transition: 0.5s ease;
+    border: 2px solid var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.theme-btn.btn-style-one:hover {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* SLIDER OVERLAY - Darkens image so text is readable */
+.rev-slidebg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust darkness here */
+}
+
+/* RESPONSIVE TABLET/MOBILE */
+@media (max-width: 768px) {
+    .main-slider h2 { font-size: 35px !important; }
+    .main-slider h4 { font-size: 18px !important; }
+}
+
